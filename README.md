@@ -54,27 +54,32 @@ Copyright (c) 2022 Alex Shevlin
       </code>
     </td>
     <td>
-    "Rock, Paper"
+    "rock, paper"
     </td>
   </tr>
   <tr>
-    <td>save input of both users</td>
+    <td>compare input and return winner</td>
     <td>
       <code>
       </code>
     </td>
-    <td>"Rock, Paper"</td>
+    <td>"user 2 wins"</td>
   </tr>
     <tr>
-    <td></td>
+    <td>return draw if inputs are same</td>
     <td>
       <code>
       </code>
     </td>
-    <td></td>
+    <td>"it's a draw!"</td>
+  </tr>
+    </tr>
+    <tr>
+    <td>return error if entered input is wrong</td>
+    <td>
+      <code>
+      </code>
+    </td>
+    <td>"please enter rock, paper, or scissors"</td>
   </tr>
 
-  | "Rock, Paper" |
-| compare input and return winner| | "user 2 wins" |
-| return draw if inputs are same| | "it's a draw!" |
-| return error if entered input is wrong | | "please enter rock, paper, or scissors" |
