@@ -23,5 +23,13 @@ namespace RPS.Tests
       Game newGame = new Game(player1Input, player2Input);
       Assert.AreEqual("Player2", newGame.ReturnWinner());
     }
+    [TestMethod]
+    public void ReturnWinner_CompareUserInputToReturnDraw_Draw()
+    {
+      string player1Input = "rock";
+      string player2Input = "rock";
+      Game newGame = new Game(player1Input, player2Input);
+      Assert.AreEqual("It's a draw!", newGame.ReturnWinner());
+    }
   } 
 }
