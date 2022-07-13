@@ -18,7 +18,6 @@ A recreation of the game rock, paper, scissors by using user input. Logic allows
 
 * _clone repo to pc_
 
-
 ## Known Bugs
 
 * _No known bugs. If any are found please contact us!_
@@ -33,11 +32,49 @@ Copyright (c) 2022 Alex Shevlin
 
 * Alex Shevlin <alexshevlin1@gmail.com>
 
-#### Tests
+### **Tests**
 
-| Describe (_it should_) | Code | Expected Output |  
-| :------  | :--- | :-------------- |
-| save input of both users|  | "Rock, Paper" |
+<table>
+  <tr>
+    <th>Describe</th>
+    <th>Code</th>
+    <th>Expected Output</th>
+  </tr>
+  <tr>
+    <td>save input of both users</td>
+    <td>
+      <code lang="C#"> 
+        string player1 = "rock";
+        <br>
+        string player2 = "paper";
+        <br>
+        string input = player1 + ", " + player2;
+        <br>
+        Game newGame = new Game(player1, player2);
+      </code>
+    </td>
+    <td>
+    "Rock, Paper"
+    </td>
+  </tr>
+  <tr>
+    <td>save input of both users</td>
+    <td>
+      <code>
+      </code>
+    </td>
+    <td>"Rock, Paper"</td>
+  </tr>
+    <tr>
+    <td></td>
+    <td>
+      <code>
+      </code>
+    </td>
+    <td></td>
+  </tr>
+
+  | "Rock, Paper" |
 | compare input and return winner| | "user 2 wins" |
 | return draw if inputs are same| | "it's a draw!" |
 | return error if entered input is wrong | | "please enter rock, paper, or scissors" |
