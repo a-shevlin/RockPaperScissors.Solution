@@ -7,13 +7,22 @@ namespace RPS.Tests
   public class GameTests
   {
     [TestMethod]
-    public void ReturnUserInput_ReturnUserInputToNewGame_PlayerInfo()
+    public void ReturnUserInputOne_ReturnUserInputToNewGame_ROCK()
     {
       string player1 = "ROCK";
       string player2 = "PAPER";
-      string input = player1 + ", " + player2;
+      string output = "Player1 selected ROCK";
       Game newGame = new Game(player1, player2);
-      Assert.AreEqual(input, newGame.ReturnUserInput());
+      Assert.AreEqual(output, newGame.ReturnUserInputOne());
+    }
+    [TestMethod]
+    public void ReturnUserInputTwo_CheckUserInputIfValid_NotValid()
+    {
+      string player1Input = "gun";
+      string player2Input = "rock";
+      string error = "NOT A VALID INPUT";
+      Game newGame = new Game(player1Input, player2Input);
+      Assert.AreEqual(error, newGame.ReturnUserInputOne());
     }
     [TestMethod]
     public void ReturnWinner_CompareUserInputToReturnWinner_Winner()
@@ -31,5 +40,6 @@ namespace RPS.Tests
       Game newGame = new Game(player1Input, player2Input);
       Assert.AreEqual("It's a draw!", newGame.ReturnWinner());
     }
+
   } 
 }
