@@ -12,3 +12,25 @@
 //Expand rules to allow 3 players
 
 //Code
+
+namespace RPS.Models
+{
+  public class Game
+  {
+    private string PlayerOneInput;
+    private string PlayerTwoInput;
+    public string Result;
+
+    public Game(string player1, string player2)
+    {
+      PlayerOneInput = player1;
+      PlayerTwoInput = player2;
+    }
+
+    public string ReturnUserInput()
+    {
+      string newInput = PlayerOneInput + ", " + PlayerTwoInput;
+      return newInput;
+    }
+  }
+}
