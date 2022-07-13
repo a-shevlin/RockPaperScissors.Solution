@@ -17,7 +17,7 @@ namespace RPS.Models
 {
   public class Game
   {
-    public string Player1 = "Player1"; 
+    public string Player1 = "Player1"; //can change to name of player
     private string OneInput{ get; set; }
     public string Player2 = "Player2"; 
     private string TwoInput{ get; set; }
