@@ -17,20 +17,77 @@ namespace RPS.Models
 {
   public class Game
   {
-    private string PlayerOneInput;
-    private string PlayerTwoInput;
-    public string Result;
+    public string Player1 = "Player1"; 
+    private string OneInput{ get; set; }
+    public string Player2 = "Player2"; 
+    private string TwoInput{ get; set; }
+    public string Result{ get; set; }
 
     public Game(string player1, string player2)
     {
-      PlayerOneInput = player1;
-      PlayerTwoInput = player2;
+      OneInput = player1.ToUpper();
+      TwoInput = player2.ToUpper();
     }
 
     public string ReturnUserInput()
     {
-      string newInput = PlayerOneInput + ", " + PlayerTwoInput;
+      string newInput = OneInput + ", " + TwoInput;
       return newInput;
+    }
+
+    public string ReturnWinner()
+    {
+      switch(OneInput) {
+        case "ROCK": //1
+          if(TwoInput == "ROCK") //1 == 1
+          {
+            Result = "It's a draw!";
+            return Result;
+          }
+          else if(TwoInput == "PAPER") //1 beats 2
+          {
+            Result = Player2;
+            return Result;
+          }
+          else //3
+          {
+            Result = Player1;
+            return Result;
+          }
+        case "PAPER": //2
+          if(TwoInput == "ROCK") //1
+          {
+            Result = Player1;
+            return Result;
+          }
+          else if(TwoInput == "PAPER") //2
+          {
+            Result = "It's a draw!";
+            return Result;
+          }
+          else //3
+          {
+            Result = Player2;
+            return Result;
+          }
+        case "SCISSORS": //3
+          if(TwoInput == "ROCK") //1
+          {
+            Result = Player2;
+            return Result;
+          }
+          else if(TwoInput == "PAPER") //2
+          {
+            Result = Player1;
+            return Result;
+          }
+          else
+          {
+            Result = "It's a draw!"; //3
+            return Result;
+          }
+      }
+      return Result;
     }
   }
 }
