@@ -9,11 +9,19 @@ namespace RPS.Tests
     [TestMethod]
     public void ReturnUserInput_ReturnUserInputToNewGame_PlayerInfo()
     {
-      string player1 = "rock";
-      string player2 = "paper";
+      string player1 = "ROCK";
+      string player2 = "PAPER";
       string input = player1 + ", " + player2;
       Game newGame = new Game(player1, player2);
       Assert.AreEqual(input, newGame.ReturnUserInput());
+    }
+    [TestMethod]
+    public void ReturnWinner_CompareUserInputToReturnWinner_Winner()
+    {
+      string player1Input = "rock";
+      string player2Input = "paper";
+      Game newGame = new Game(player1Input, player2Input);
+      Assert.AreEqual("Player2", newGame.ReturnWinner());
     }
   } 
 }
