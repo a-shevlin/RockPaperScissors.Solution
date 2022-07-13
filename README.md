@@ -4,19 +4,34 @@
 
 #### By Alex Shevlin
 
+## Table of Contents
+
+**[Technologies Used](#technologies-used)  
+[Description](#description)  
+[Technology Requirements](#technology-requirements)  
+[Setup and Installation](#setupinstallation-requirements)  
+[Known Bugs](#known-bugs)  
+[License](#license)  
+[Contact Info](#contact-information)  
+[Tests](#tests)**
+
 ## Technologies Used
 
 * _C#_
 * _Net 5.0_
-* _Markdown_
 
 ## Description
 
 A recreation of the game rock, paper, scissors by using user input. Logic allows the game to make rock beat scissors, scissors beat paper, and paper beat rock. If both players choose the same input then the game ends with a draw.
 
+## Technology Requirements
+
+* Download and install **[.NET 5](https://dotnet.microsoft.com/en-us/download/dotnet/5.0)**  
+* Download and instal a code text editor. This project was set up with **[VS Code](https://code.visualstudio.com/)**
+
 ## Setup/Installation Requirements
 
-* _clone repo to pc_
+* clone repo to pc
 
 ## Known Bugs
 
@@ -43,15 +58,13 @@ Copyright (c) 2022 Alex Shevlin
   <tr>
     <td>save input of both users</td>
     <td>
-      <code lang="C#"> 
-        string player1 = "rock";
-        <br>
-        string player2 = "paper";
-        <br>
-        string input = player1 + ", " + player2;
-        <br>
-        Game newGame = new Game(player1, player2);
-      </code>
+      string player1 = "rock";
+      <br>
+      string player2 = "paper"; 
+      <br>
+      string input = player1 + ", " + player2; 
+      <br>
+      Game newGame = new Game(player1, player2);  
     </td>
     <td>
     "rock, paper"
@@ -60,8 +73,8 @@ Copyright (c) 2022 Alex Shevlin
   <tr>
     <td>compare input and return winner</td>
     <td>
-      <code>
-      </code>
+    <code>
+    </code>
     </td>
     <td>"user 2 wins"</td>
   </tr>
