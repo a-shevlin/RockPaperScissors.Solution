@@ -19,20 +19,64 @@ namespace RPS.Models
   {
     public string Player1 = "Player1"; //can change to name of player
     private string OneInput{ get; set; }
+    public string OneOutput{ get; set; }
     public string Player2 = "Player2"; 
     private string TwoInput{ get; set; }
+    public string TwoOutput{ get; set; }
     public string Result{ get; set; }
+    public string Error{ get; set; }
 
     public Game(string player1, string player2)
     {
       OneInput = player1.ToUpper();
-      TwoInput = player2.ToUpper();
+      TwoInput = player2.ToUpper();        
     }
 
-    public string ReturnUserInput()
+    public string ReturnUserInputOne()
     {
-      string newInput = OneInput + ", " + TwoInput;
-      return newInput;
+      if(OneInput == "ROCK")
+      {
+        OneOutput = Player1 + " selected " + OneInput;
+        return OneOutput;
+      }
+      else if(OneInput == "PAPER")
+      {
+        OneOutput = Player1 + " selected " + OneInput;
+        return OneOutput;
+      }
+      else if(OneInput == "SCISSORS")
+      {
+        OneOutput = Player1 + " selected " + OneInput;
+        return OneOutput;
+      }
+      else {
+        OneOutput = Player1 + " please choose ROCK, PAPER, or SCISSORS.";
+        Error = "NOT A VALID INPUT";
+      }
+      return Error;
+    }
+
+    public string ReturnUserInputTwo()
+    {
+      if(TwoInput == "ROCK")
+      {
+        TwoOutput = Player2 + " selected " + TwoInput;
+        return TwoOutput;
+      }
+      else if(TwoOutput == "PAPER")
+      {
+        TwoOutput = Player2 + " selected " + TwoInput;
+        return TwoOutput;
+      }
+      else if(TwoOutput == "SCISSORS")
+      {
+        TwoOutput = Player2 + " selected " + TwoInput;
+        return TwoOutput;
+      }
+      else {
+        TwoOutput = Player2 + " please choose ROCK, PAPER, or SCISSORS.";        Error = "NOT A VALID INPUT";
+      }
+      return Error;
     }
 
     public string ReturnWinner()
