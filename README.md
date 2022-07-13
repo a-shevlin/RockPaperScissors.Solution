@@ -58,16 +58,16 @@ Copyright (c) 2022 Alex Shevlin
   <tr>
     <td>save input of both users</td>
     <td>
-      string player1 = "rock";
+      string player1 = "ROCK";
       <br>
-      string player2 = "paper"; 
+      string player2 = "PAPER"; 
       <br>
       string input = player1 + ", " + player2; 
       <br>
       Game newGame = new Game(player1, player2);  
     </td>
     <td>
-    "rock, paper"
+    "ROCK, PAPER"
     </td>
   </tr>
   <tr>
@@ -79,11 +79,16 @@ Copyright (c) 2022 Alex Shevlin
       <br>
       Game newGame = new Game(player1Input, player2Input)
     </td>
-    <td>"user 2 wins"</td>
+    <td>"Player2"</td>
   </tr>
     <tr>
     <td>return draw if inputs are same</td>
     <td>
+      string player1Input = "rock";
+      <br>
+      string player2Input = "rock";
+      <br>
+      Game newGame = new Game(player1Input, player2Input);
     </td>
     <td>"it's a draw!"</td>
   </tr>
