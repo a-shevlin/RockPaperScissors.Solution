@@ -73,16 +73,17 @@ Copyright (c) 2022 Alex Shevlin
   <tr>
     <td>compare input and return winner</td>
     <td>
-    <code>
-    </code>
+      string player1Input = "rock";
+      <br>
+      string player2Input = "paper";
+      <br>
+      Game newGame = new Game(player1Input, player2Input)
     </td>
     <td>"user 2 wins"</td>
   </tr>
     <tr>
     <td>return draw if inputs are same</td>
     <td>
-      <code>
-      </code>
     </td>
     <td>"it's a draw!"</td>
   </tr>
@@ -90,9 +91,10 @@ Copyright (c) 2022 Alex Shevlin
     <tr>
     <td>return error if entered input is wrong</td>
     <td>
-      <code>
-      </code>
     </td>
     <td>"please enter rock, paper, or scissors"</td>
   </tr>
+</table>
+
+###### **[Back to Top](#rock-paper-scissors)**
 
